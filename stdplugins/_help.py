@@ -14,7 +14,7 @@ async def _(event):
         s_help_string = borg._plugins[splugin_name].__doc__
     else:
         s_help_string = ""
-    help_string = """`Yes Sir, I'm running. I'm the PA & Userbot of White Devil`
+    help_string = """`Yeah Yeah, I'm running. I'm the PA & Userbot of White Devil`
 """.format(
         sys.version,
         __version__
