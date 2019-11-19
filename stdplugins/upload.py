@@ -3,9 +3,9 @@
 # file, You can obtain one at https://www.gnu.org/licenses/gpl-3.0.en.html
 """Uploads Files to Telegram
 Available Commands:
-.uploda <Path To File>
-.uplodadir <Path To Directory>
-.uplodaasstream <Path To File>"""
+.upload <Path To File>
+.uploadir <Path To Directory>
+.uploadasstream <Path To File>"""
 
 import asyncio
 import os
@@ -16,7 +16,6 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
-from telethon.tl.types import DocumentAttributeAudio
 from uniborg.util import progress, admin_cmd
 
 
@@ -33,7 +32,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-@borg.on(admin_cmd("uplodadir (.*)"))
+@borg.on(admin_cmd("uploadir (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -59,19 +58,19 @@ async def _(event):
                 force_document = True
                 supports_streaming = False
                 document_attributes = []
-                width = 0
-                height = 0
-                if os.path.exists(thumb_image_path):
-                    metadata = extractMetadata(createParser(thumb_image_path))
-                    if metadata.has("width"):
-                        width = metadata.get("width")
-                    if metadata.has("height"):
-                        height = metadata.get("height")
-                if single_file.endswith((".mkv", ".mp4", ".webm")):
+                if single_file.endswith((".mkv", ".mp4", ".mp3", ".flac", ".webm")):
                     metadata = extractMetadata(createParser(single_file))
                     duration = 0
+                    width = 0
+                    height = 0
                     if metadata.has("duration"):
                         duration = metadata.get('duration').seconds
+                    if os.path.exists(thumb_image_path):
+                        metadata = extractMetadata(createParser(thumb_image_path))
+                        if metadata.has("width"):
+                            width = metadata.get("width")
+                        if metadata.has("height"):
+                            height = metadata.get("height")
                     document_attributes = [
                         DocumentAttributeVideo(
                             duration=duration,
@@ -81,37 +80,13 @@ async def _(event):
                             supports_streaming=True
                         )
                     ]
-                    supports_streaming = True
-                    force_document = False
-                if single_file.endswith((".mp3", ".flac", ".wav")):
-                    metadata = extractMetadata(createParser(single_file))
-                    duration = 0
-                    title = ""
-                    artist = ""
-                    if metadata.has("duration"):
-                        duration = metadata.get('duration').seconds
-                    if metadata.has("title"):
-                        title = metadata.get("title")
-                    if metadata.has("artist"):
-                        artist = metadata.get("artist")
-                    document_attributes = [
-                        DocumentAttributeAudio(
-                            duration=duration,
-                            voice=False,
-                            title=title,
-                            performer=artist,
-                            waveform=None
-                        )
-                    ]
-                    supports_streaming = True
-                    force_document = False
                 try:
                     await borg.send_file(
                         event.chat_id,
                         single_file,
                         caption=caption_rts,
-                        force_document=force_document,
-                        supports_streaming=supports_streaming,
+                        force_document=bool(os.environ.get('FORCE_DOCUMENT',None)),
+                        supports_streaming=False,
                         allow_cache=False,
                         reply_to=event.message.id,
                         thumb=thumb,
@@ -141,7 +116,7 @@ async def _(event):
         await event.edit("404: Directory Not Found")
 
 
-@borg.on(admin_cmd(pattern="uploda (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="upload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -166,11 +141,11 @@ async def _(event):
             )
         )
         end = datetime.now()
-        # os.remove(input_str)
+        os.remove(input_str)
         ms = (end - start).seconds
         await mone.edit("Uploaded in {} seconds.".format(ms))
     else:
-        await mone.edit("6969: maa chuda bsdk, File Not Found")
+        await mone.edit("404: File Not Found")
 
 
 def get_video_thumb(file, output=None, width=90):
@@ -186,7 +161,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd(pattern="uplodaasstream (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="uploadasstream (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
