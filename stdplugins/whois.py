@@ -1,5 +1,5 @@
 """Get Telegram Profile Picture and other information
-Syntax: .rendi @username"""
+Syntax: .profile @username"""
 
 import html
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -9,7 +9,7 @@ from telethon.utils import get_input_location
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("rendi ?(.*)"))
+@borg.on(admin_cmd("profile ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -46,7 +46,7 @@ async def _(event):
     except Exception as e:
         dc_id = "Need a Profile Picture to check **this**"
         location = str(e)
-    caption = """Detailed Whois:
+    caption = """Detailed Profile Info:
 
 🔖ID: <code>{}</code>
 🤵Name: <a href='tg://user?id={}'>{}</a>
