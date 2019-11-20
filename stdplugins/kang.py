@@ -2,7 +2,7 @@
 Available Commands:
 .lund [Optional Emoji]
 .packinfo
-.loda {for zip sticker pack}"""
+.load {for zip sticker pack}"""
 from telethon import events
 from io import BytesIO
 from PIL import Image
@@ -44,18 +44,18 @@ async def _(event):
 
     me = borg.me
     userid = event.from_id
-    packname = f"@r4v4n4 geng beng"
-    packshortname = f"ravana_gengbeng{userid}"  # format: Uni_Borg_userid
+    packname = f"WhiteDevil"
+    packshortname = f"WhiteDevil{userid}"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "ravana_Sticker.png"
+    file_ext_ns_ion = f"Devil_Sticker.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"ravana_AnimatedStickers"
-        packshortname = f"ravana_Animated"  # format: Uni_Borg_userid
+        packname = "Devil_AnimatedStickers"
+        packshortname = "Devil"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -155,7 +155,7 @@ async def _(event):
                      f"**Emojis In Pack:** {' '.join(pack_emojis)}")
 
 
-@borg.on(admin_cmd("loda ?(.*)"))
+@borg.on(admin_cmd("load ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
