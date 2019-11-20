@@ -86,12 +86,13 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "© @UniBorg",
-                text="""@minalinsky **( Custom Built By** @Minalinsky **)**
-
-**Pithun 3.7.4 (default, Sep 12 2019, 01:19:52)** 
+                text="""@Minalinsky **( Self Built By** @Minalinsky **)**
+**Python 3.7.4 (default, Sep 12 2019, 01:19:52)** 
 **[GCC 7.4.0]**
-**Talethrun 1.10.6**
-
+**Telethon 1.10.6**
+**Self Built Fork:** https://github.com/iamvpk/DevilBorg""",
+                buttons=[
+                    [custom.Button.url("👨‍💻Source Code👨‍💻", "https://github.com/ravana69/Pornhub")]
                 ],
                 link_preview=True
             )
@@ -110,7 +111,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "⚠️ Warning: Don't Press Any Buttons ⚠️\n\nCustom Fork: Not Available"
+            reply_pop_up_alert = "⚠️ Warning: Don't Press Any Buttons ⚠️\n\nSelf Fork: https://github.com/iamvpk/DevilBorg\n\n\nNote: Good to Go"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
