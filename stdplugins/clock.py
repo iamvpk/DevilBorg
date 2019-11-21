@@ -1,4 +1,4 @@
-"""COMMAND : .sclock"""
+"""COMMAND : .clock"""
 
 from telethon import events
 
