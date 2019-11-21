@@ -1,6 +1,6 @@
 """
 Say something interesting...
-Syntax: .belo
+Syntax: .quotes
     by @Deonnn
 Quotes credits: Being logical Channel
 """
