@@ -21,7 +21,7 @@ PREV_REPLY_MESSAGE = {}
 BAALAJI_TG_USER_BOT = "uh oh, Seems My Master hasn't approved you to PM."
 TG_COMPANION_USER_BOT = "Please wait for his response and don't spam his PM."
 UNIBORG_USER_BOT_WARN_ZERO = "I am currently offline. Please do not SPAM me."
-UNIBORG_USER_BOT_NO_WARN = "Hi there I'm the PA & Userbot of WhiteDevil. He is Offline Now, He will message once he get online. Untill then, Don't Spam this chat. Otherwise, you got Banned & Reported...."
+UNIBORG_USER_BOT_NO_WARN = "Hi there I'm the PA & AI Created by my Boss WhiteDevil . My Boss is Offline Now, I'll Log your message & Report him. My boss will message once he get online. Untill then, Don't Spam this chat. Otherwise, you will be Banned permanent & Reported to Telegram...."
 
 
 @borg.on(admin_cmd(pattern="nccreatedch"))
@@ -97,7 +97,7 @@ async def approve_p_m(event):
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Cool, You can PM me from now. You are approved to do so...")
+                await event.edit("Cool, You can PM my Boss from now. You are approved to do so...")
                 await asyncio.sleep(30)
                 await event.delete()
 
@@ -112,7 +112,7 @@ async def approve_p_m(event):
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("Fuck Off Bitch, Now You Can't Message Me, You shouldn't...")
+                await event.edit("Fuck Off Bitch, Now You Can't Message My boss, You shouldn't...")
                 await asyncio.sleep(30)
                 await borg(functions.contacts.BlockRequest(chat.id))
 
