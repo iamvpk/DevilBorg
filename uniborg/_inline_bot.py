@@ -86,8 +86,8 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "© @UniBorg",
-                text="""@Minalinsky **( Self Built By** @Minalinsky **)**
-**Python 3.7.4 (default, Sep 12 2019, 01:19:52)** 
+                text="""Minalinsky **( Self Built By** Minalinsky **)**
+**Python 3.7.4** 
 **[GCC 7.4.0]**
 **Telethon 1.10.6**
 **Self Built Fork:** https://github.com/iamvpk/DevilBorg""",
@@ -143,7 +143,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         reply_pop_up_alert = help_string if help_string is not None else \
             "No DOCSTRING has been setup for {} plugin".format(plugin_name)
         reply_pop_up_alert += "\n\n Use .unload {} to remove this plugin\n\
-            © @r4v4n4".format(plugin_name)
+            © @Minalinsky".format(plugin_name)
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
