@@ -42,11 +42,11 @@ async def _(event):
             "⬛⬆️↗️\n⬛🔄➡️\n↙️⬇️↘️",
             "⬛⬆️↗️\n⬅️🔄➡️\n↙️⬇️↘️",
             "↖️⬆️↗️\n⬅️🔄➡️\n↙️⬇️↘️",
-            "**Chat Message Exported To** `./ravana/`",
-            "**Chat Message Exported To** `./ravana/chatbackup/`",
-            "**Chat Message Exported To** `./ravana/chatbackup/groupchat.txt`",
-            "__Legend is leaving this chat.....! Gaand Marao Bc..__",
-            "__Legend is leaving this chat.....! Gaand Marao Bc..__"
+            "**Chat Message Exported To** `./DOWNLOADS/`",
+            "**Chat Message Exported To** `./DOWNLOADS/chatbackup/`",
+            "**Chat Message Exported To** `./DOWNLOADS/chatbackup/groupchat.txt`",
+            "__Legend is leaving this chat.....! Leaving..__",
+            "__Legend is leaving this chat.....! Bye Bye..__"
 
  ]
 
