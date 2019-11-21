@@ -106,10 +106,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**Just send what is the matter in one message. He'll read once he's up. For now RIP** " + \
+        message_to_reply = f"**Just send here what's the matter in one message. I'll inform my Boss to reply soon.** " + \
             f"\n\n__Reason:__ {reason}" \
             if reason \
-            else f"Umm.....\n\n**Sorry for the inconvinience**\n\nIt's looklike my master isn't visit telegram for a while. God only know his last seen. ..."
+            else f"Umm.....\n\n**Sorry for the inconvinience**\n\nIt's looklike my boss isn't available. God only knows his last seen. ..."
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in borg.storage.last_afk_message:  # pylint:disable=E0602
