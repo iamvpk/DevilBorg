@@ -18,8 +18,8 @@ PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
 
-BAALAJI_TG_USER_BOT = "uh oh, Seems My Master hasn't approved you to PM."
-TG_COMPANION_USER_BOT = "Please wait for his response and don't spam his PM."
+BAALAJI_TG_USER_BOT = "uh oh, Seems My Boss hasn't approved you to PM."
+TG_COMPANION_USER_BOT = "Please wait for his response and don't spam this chat."
 UNIBORG_USER_BOT_WARN_ZERO = "I am currently offline. Please do not SPAM me."
 UNIBORG_USER_BOT_NO_WARN = "Hi there I'm the PA & AI Created by my Boss WhiteDevil . My Boss is Offline Now, I'll Log your message & Report him. My boss will message once he get online. Untill then, Don't Spam this chat. Otherwise, you will be Banned permanent & Reported to Telegram...."
 
