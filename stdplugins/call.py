@@ -1,4 +1,4 @@
-"""COMMAND : ./cull"""
+"""COMMAND : ./call"""
 
 from telethon import events
 
@@ -31,20 +31,20 @@ async def _(event):
             "`Connecting To Telegram Headquarters...`",
             "`Call Connected.`",
             "`Telegram: Hello This is Telegram HQ. Who is this?`",
-            "`Me: Yo this is` @r4v4n4 ,`Please Connect me to Pavel Durov Shukla`",
+            "`Me: Yo this is` White Devil ,`Please Connect me to Dark Angel`",
             "`User Authorised.`",
-            "`Calling Pavel Durov Shukla (@durov) At +916969696969`",
+            "`Calling Dark Angel At +002XYZZXY (ENCRYPTED NUMBER & CALL)`",
             "`Private  Call Connected...`",
             "`Me: Hello Sir, Please Ban This Telegram Account.`",    
-            "`Durov: May I Know Who Is This?`",
-            "`Me: Yo Brah, I Am` @r4v4n4",
-            "`Durov: OMG!!! I Am FAN Of You Sir...\nI'll Make Sure That Guy Account Will Get Blocked Within 24Hrs.`",
-            "`Me: Thanks, See You Later Brah.`",
-            "`Durov: Please Don't Thank Sur, Telegram Is Your's. Just Gimme A Call When You Become Free.`",
+            "`Darky: May I Know Who Is This?`",
+            "`Me: Yo Bruh, I Am` White Devil",
+            "`Darky: OMG!!! I Am FAN Of You Sir...\nI'll Make Sure That Guy Account Will Get Blocked Within 24Hrs.`",
+            "`Me: Thanks, See You Later Dark Angel.`",
+            "`Darky: Please Don't Thank me Boss, Telegram Is Your's. Just Gimme A Call When You Become Free.`",
             "`Me: Is There Any Issue/Emergency???`",
-            "`Durov: Yes Sur, There Is A Bug In Telegram v5.8.0.\nI Am Not Able To Fix It. If Possible, Please Help Fix The Bug.`",
+            "`Darky: Yes Sir, There Is A Bug In Telegram v5.12.1.\nI Am Not Able To Fix It. If Possible, Please Help Fix The Bug.`",
             "`Me: Send Me The App On My Telegram Account, I Will Fix The Bug & Send You.`",
-            "`Durov: Sure Sur \nTC Bye Bye :)`",
+            "`Darky: Sure Sir \nTC Bye Bye :)`",
             "`Private Call Disconnected.`"
         ]
 
