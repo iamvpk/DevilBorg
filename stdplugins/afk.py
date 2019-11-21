@@ -106,10 +106,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"╭━╮╭━╮╱╱╱╱╱╱╭╮\n┃┃╰╯┃┃╱╱╱╱╱╭╯╰╮\n┃╭╮╭╮┣━━┳━━╋╮╭╋━━┳━╮\n┃┃┃┃┃┃╭╮┃━━┫┃┃┃┃━┫╭╯\n┃┃┃┃┃┃╭╮┣━━┃┃╰┫┃━┫┃\n╰╯╰╯╰┻╯╰┻━━╯╰━┻━━┻╯\n╭━━╮\n╰┫┣╯\n╱┃┃╭━━╮\n╱┃┃┃━━┫\n╭┫┣╋━━┃\n╰━━┻━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┣╮╭╮╭┳━━┳╮╱╭╮\n┃╰━╯┃╰╯╰╯┃╭╮┃┃╱┃┃\n┃╭━╮┣╮╭╮╭┫╭╮┃╰━╯┃\n╰╯╱╰╯╰╯╰╯╰╯╰┻━╮╭╯\n╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃\n╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n╭━━━╮\n┃╭━━╯\n┃╰━━┳━┳━━┳╮╭╮\n┃╭━━┫╭┫╭╮┃╰╯┃\n┃┃╱╱┃┃┃╰╯┃┃┃┃\n╰╯╱╱╰╯╰━━┻┻┻╯\n╭╮╭━╮╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╭╮\n┃┃┃╭╯╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱┃┃\n┃╰╯╯╭━━┳╮╱╭┫╰━┳━━┳━━┳━┳━╯┃\n┃╭╮┃┃┃━┫┃╱┃┃╭╮┃╭╮┃╭╮┃╭┫╭╮┃\n┃┃┃╰┫┃━┫╰━╯┃╰╯┃╰╯┃╭╮┃┃┃╰╯┃\n╰╯╰━┻━━┻━╮╭┻━━┻━━┻╯╰┻╯╰━━╯\n╱╱╱╱╱╱╱╭━╯┃\n╱╱╱╱╱╱╱╰━━╯  \n\n**Last Seen: Only God Knows.** " + \
+        message_to_reply = f"**Just send what is the matter in one message. He'll read once he's up. For now RIP** " + \
             f"\n\n__Reason:__ {reason}" \
             if reason \
-            else f"RIP.....\n\n**Important Notice**\n\nIt's looklike my master isn't visit telegram for a while. God only know his last seen. ..."
+            else f"Umm.....\n\n**Sorry for the inconvinience**\n\nIt's looklike my master isn't visit telegram for a while. God only know his last seen. ..."
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in borg.storage.last_afk_message:  # pylint:disable=E0602
