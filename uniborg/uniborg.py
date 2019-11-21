@@ -34,7 +34,7 @@ class Uniborg(TelegramClient):
             "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
             "device_model": "Asus R.O.G 2",
             "app_version": "DevilBorg",
-            "lang_code": "ml",
+            "lang_code": "en",
             **kwargs
         }
 
