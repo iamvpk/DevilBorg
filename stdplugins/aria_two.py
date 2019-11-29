@@ -1,8 +1,8 @@
 """
 A Torrent Client Plugin Based On Aria2 for Userbot
 Syntax: Start Aria2: .ariastart
-    Magnet link: .addmagnet magnetLink
-    Torrent file from local: .addtorrent file_path
+    Magnet link: .amag magnetLink
+    Torrent file from local: .ator file_path
     Show Downloads: .ariastatus
     Remove All Downloads: .ariaRM
     Resume All Downloads: .ariaRES
@@ -45,7 +45,7 @@ async def aria_start(event):
     await event.edit(OUTPUT)
 
 
-@borg.on(admin_cmd(pattern="addmagnet"))
+@borg.on(admin_cmd(pattern="amag"))
 async def magnet_download(event):
     if event.fwd_from:
         return
@@ -70,7 +70,7 @@ async def magnet_download(event):
     await check_progress_for_dl(new_gid, event)
 
 
-@borg.on(admin_cmd(pattern="addtorrent"))
+@borg.on(admin_cmd(pattern="ator"))
 async def torrent_download(event):
     if event.fwd_from:
         return
