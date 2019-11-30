@@ -7,7 +7,7 @@
   ],
   "repository": "https://gitlab.com/SpEcHiDe/UniBorg",
   "website": "https://telegram.dog/UniBorg",
-  "success_url": "https://telegram.dog/r4v4n4",
+  "success_url": "https://telegram.dog/minalinsky",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable environment variables.",
@@ -45,7 +45,7 @@
     },
     "TMP_DOWNLOAD_DIRECTORY": {
       "description": "This is required for the plugins involving the file system.",
-      "value": "./ravana/",
+      "value": "./DOWNLOADS/",
       "required": false
     },
     "IBM_WATSON_CRED_URL": {
@@ -68,7 +68,7 @@
     },
     "TELEGRAPH_SHORT_NAME": {
       "description": "This is required for the @telegraph functionality.",
-      "value": "LUCIFERTHEKING",
+      "value": "WHITEDEVIL",
       "required": false
     },
     "OCR_SPACE_API_KEY": {
@@ -153,7 +153,7 @@
     },
     "AUTH_TOKEN_DATA": {
       "description": "This is required for gdrive to work. This might help: https://da.gd/authtoken ",
-      "value": "blahblah",
+      "value": "Get ASAP",
       "required": false
     },
     "DATA_DIRECTORY": {
@@ -207,9 +207,9 @@
       "value": "-100",
       "required": false
     },
-    "RAVANA_LEELA": {
+    "PFP_TIMESTAMP": {
       "description": "TO ADD TIME ON YOUR PROFILE PIC, ADD LINK OF IMAGE ENDING WITH .JPG",
-      "value": "https://telegra.ph/file/674ef67d845b4304823d3.jpg",
+      "value": "https://example.comp/file/title.jpg",
       "required": false
     },
     "TELE_GRAM_2FA_CODE": {
